@@ -87,5 +87,43 @@ public class Ar_UList {
         }
         System.out.println();
     }
+    
+    // Homework question 4 part A
+    public int getMax() {
+    	int max = ListItems[0];
+        for (int i = 1; i < length; i++) {
+            if (ListItems[i] > max) {
+                max = ListItems[i];
+            }
+        }
+        return max;
+    }
+    
+    // Homework question 4 part B
+    public int getRange() {
+    	int max = ListItems[0];
+        int min = ListItems[0];
+
+        for (int i = 1; i < length; i++) {
+            if (ListItems[i] > max) {
+                max = ListItems[i];
+            }
+            if (ListItems[i] < min) {
+                min = ListItems[i];
+            }
+        }
+        return max - min;
+    }
+    
+    // Homework question 4 part C
+	public Ar_UList duplicateInRange(int lbound, int ubound) {
+		Ar_UList result = new Ar_UList();
+	    for (int i = 0; i < length; i++) {
+	        if (ListItems[i] >= lbound && ListItems[i] <= ubound) {
+	            result.putItem(ListItems[i]);
+	        }
+	    }
+	    return result;
+	}
 
 }
