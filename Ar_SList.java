@@ -1,4 +1,4 @@
-package ulist;
+package slist;
 
 public class Ar_SList {
 	
